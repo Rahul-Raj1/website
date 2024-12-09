@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+
+h4 {
+    font-size: 20px;
+    color: black;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0px 20px 0px;
+}
+
+.section-p1 {
+    margin: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0px;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 20px 80px;
+    background: #e3e6f3;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#header img{
+    position: relative;
+    right: 58px;
+}
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style-type: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600px;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+#hero {
+        width: 100%;
+        height: 300px;
+        padding: 0;
+        margin: 0;
+        align-items: flex-start;
+    }
+    .video video{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .box1 {
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        font-size: medium;
+        margin-left: 777px;
+        padding-top: 388px;
+        color: white;
+        position: relative;
+        top: -755px;
+    }
+    .box1 h1 {
+        font-size: 50px;
+        line-height: 64px;
+        color: white;
+    }
+    .box1 p {
+        font-size: 20px;
+         color:white;
+         margin: 15px 0px 20px 0px;
+    }
+    #about-head{
+        display: flex;
+        align-items: center;
+        background: #000;
+        padding-top: 566px;
+        margin: 0;
+    }
+    #about-head h1{
+        padding-top: 12px;
+        color: white;
+        font-size: 43px;
+    }
+    #about-head img{
+        width: 758px;
+        height: 400px;
+    }
+    #about-head div{
+        padding-left: 175px;
+        color: white;
+    }
+    #about-head p{
+        color: white;
+    }
+    #head{
+        display: flex;
+        align-items: center;
+        background: #000;
+        padding-top: 0px;
+        margin: 0;
+    }
+    #head h1{
+        padding-top: 12px;
+        color: white;
+        font-size: 43px;
+    }
+    #head img{
+        width: 758px;
+        height: 400px;
+    }
+    #head div{
+        padding-left: 175px;
+        color: white;
+    }
+    #head p{
+        color: white;
+    }
+
+    .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
+        .name{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 465px;
+        }
+        .name span{
+            padding-left: 0px;
+            width: 46%;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 8px;
+        }
+        .register select{
+            border-radius: 12px;
+            position: relative;
+            bottom: 63px;
+            right: 3px;
+        }
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #575757;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+        #contact-details{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #000; 
+        padding: 0;
+        margin: 0;
+    }
+    #contact-details .details{
+        width: 100%;
+    }
+    .section-p2{
+        display: flex;
+        align-items: center;
+        background: #000;
+        padding-top: 564px;
+        margin: 0;
+    }
+    #contact-details .details span,
+    #form-details form span{
+        font-size: 12px;
+    }
+    #contact-details .details h2, 
+    #form-details form h2{
+        font-size: 26px;
+        line-height: 35px;
+        padding: 20px 0px;
+    }
+    #contact-details .details h3{
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+    #contact-details .details li{
+        list-style: none;
+        display: flex;
+        padding: 10px 0px;
+    }
+    #contact-details .details li i{
+        font-size: 14px;
+        padding-right: 22px;
+    }
+    #contact-details .details li p{
+        margin: 0;
+        font-size: 14px;
+    }
+    #contact-details .map{
+        width: 55%;
+        height: 352px;
+    }
+    #contact-details .map iframe{
+        width: 100%;
+        height: 100%;
+    }
+    .map img{
+        height: 350px;
+    }
+    .details h1{
+        color: white;
+    }
+    .details p{
+        color: white;
+    }
+    #pagination2 {
+        background-image: url("robot1.png");
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 490px;
+        background-size: 100vw 490px;
+        padding-left: 475px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #pagination2 h1 {
+        color:white;
+        font-size: 30px;
+    }
+    #pagination2 p {
+        color:white;
+        width: 70%;
+    }
+    .last{
+        display: flex;
+    }
+    .last img{
+        padding: 27px 0px 12px 4px;
+        width: 395px;
+    }
+    .last p{
+        width: 86%;
+        padding-left: 0px;
+        padding-top: 37px;
+        font-size: 22px;
+    }
+    #linkedin{
+        display: flex;   
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 87px;
+        padding-top: 9px;
+    }
+    #linkedin img{
+        border-radius: 89px;
+        width: 168px;
+        height: 179px;
+    }
+    #linkedin li{
+        flex-direction: 20px;
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    .sparsho li{
+        position: relative;
+        left: 3px;
+    }
+    .Sayantan li{
+        position: relative;
+        left: 21px;
+    }
+    .Avaish li{
+        position: relative;
+        left: 27px;
+    }
+    .rahul li{
+        position: relative;
+        left: 40px;
+    }
+    .alam li{
+        position: relative;
+        left: 0px;
+    }
+    @media(max-width:799px){
+        #navbar{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            position:fixed;
+            top: 0px;
+            right: -300px;
+            height: 100vh;
+            width: 300px;
+            background-color: #E3E6F3;
+            box-shadow: 0px 40px 60px rgba(0,0,0,0.1);
+            padding: 80px 0px 0px 10px;
+            transition: 0.3s;
+        }
+        #navbar.active{
+            right: 0px;
+        }
+        #navbar li{
+            margin-bottom: 25px;
+        }
+        .mobile{
+        display: flex;
+        align-items: center;
+        }
+        .mobile i{
+            color: #1a1a1a;
+            font-size: 24px;
+            padding-left: 20px;
+        }
+        #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+    .box1 {
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        font-size: medium;
+        margin-left: 113px;
+        padding-top: 388px;
+        color: white;
+        position: relative;
+        top: -755px;
+}
+    .box1 h1 {
+        font-size: 50px;
+        line-height: 64px;
+        color: white;
+    }
+
+    }
+</style>
+<body>
+    <section id="header">
+    <a href="#"><img src="logo1.png" class="logo" alt="photos" width="200px"></a>
+    <div>
+        <ul id="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a class="shop" onclick="window.location.href='Shop.html';" href="shop.html">Shop</a></li>
+            <li><a class="blog" onclick="window.location.href='blog.html';" href="blog.html">Blog</a></li>
+            <li><a class="about" onclick="window.location.href='about.html';" href="about.html">About</a></li>
+            <li><a class="contact" onclick="window.location.href='contact.html';" href="contact.html">Contact</a></li>
+            
+        </ul>
+    </div>
+</section>
+<section id="hero"> 
+    <div class="video">
+    <video autoplay muted loop src="video.mp4"></video></div>
+    <div class="box1">
+        <h1>Who is the bionic arm for?</h1>
+        <p>Bionic arms are worn by people with below-elbow limb differences and upper extremity amputation. We develop bionic limbs that are bespoke to you for optimal comfort and functionality. Whether you have an acquired or congenital limb difference, our team will work with you to ensure that our prototype is the right fit to help you reach your goals.</p></div>
+</section>
+<section id="about-head" class="section-p1">
+    <img src="photo1.jpeg" alt="">
+    <div>
+    <h1>WHAT MAKES OUR PROTOTYPE BIONIC?</h1>
+    <p>A bionic arm works by picking up signals from a user’s muscles. When a user puts on their bionic arm and flexes muscles in their residual limb just below their elbow; special sensors detect tiny naturally generated electric signals, and convert these into intuitive and proportional bionic hand movement. The bionic hand is controlled by tensing the same muscles that are used to open and close a biological hand. </p>
+</div>
+</section>
+<footer id="about">
+    <section id="contact">
+        <h2>Register to try our Prototype</h2>
+        <form class="contact-form">
+            <div class="name">
+            <span><label for="name">First Name</label>
+            <input type="text" id="name" name="name" required></span>
+           <span> <label for="name">Last Name</label>
+            <input type="text" id="name" name="name" required></span></div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Phone Number:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Register</label>
+            <div class="register">
+        
+            <textarea id="message" name="message" rows="4" required ></textarea>
+            <select>
+                <option>Please Select</option>
+                <option>I have a  limbs different</option>
+                <option>I am registering for someone with a limb difference</option>
+                <option>I have a child with limb difference</option>
+                <option>I am interested in tech innovation </option>
+            </select></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</footer>
+<section id="head" class="section-p2">
+    <img src="image3.jpeg" alt="">
+    <div>
+    <h1>EXTRA FEATURES THAT MAKE OUR BIONIC ARM DIFFERENT!!</h1>
+    <p>HAPTIC FEEDBACK</p>
+    <p>Haptic feedback is a technology that uses vibrations, motions, or forces to simulate the sense of touch, enhancing user interaction with devices. Commonly found in smartphones, gaming controllers, and wearable devices, it provides tactile responses to actions, such as a vibration when typing or pressing a button. This feedback improves user experience by adding a physical dimension to digital interactions.</p>
+</div>
+</section>
+<section id="contact-details" class="section-p1">
+        <div class="details">
+            <h1>How much does a bionic arm cost?</h1>
+            <p>Our Prototype is three times cheaper than any other myoelectric prosthesis. We also work with every individual who is interested in getting our prosthetic to help them reach that goal. The total prototype cost amounts to ₹11,966 only!!</p>
+        </div>
+        <div class="map">
+            <img src="image4.jpeg" alt="">
+        </div>
+    </section>
+    <section id="pagination2">
+        <h1>READY TO START YOUR BIONIC JOURNEY?</h1>
+        <p>Our prototype will be available through prosthetic clinics in india. If you’re a below-elbow amputee or upper extremity amputee and interested to have our prosthetic arm, register your interest and we’ll be in touch with more information. Ypur bionic journey begins here</p>
+    </section>
+        <div class="last">
+            <img src="logo1.png" class="logo" alt="photos" width="200px">
+            <p>We are a dedicated team from Narula Institute of Technology, committed to developing an innovative, cost-effective bionic arm designed to address upper limb extremity dysfunction. Our mission is to provide a highly functional and humanitarian solution that enhances the quality of life for individuals in need.</p>
+        </div>
+        <div id="linkedin">
+            <div class="sparsho"><ul><img src="image1.jpeg" alt="">
+                <li>Sparsho Chakraborty</li>
+                <li>4TH Year</li>
+                <li><a href="https://www.linkedin.com/in/sparsho-chakraborty-083596285?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BerwQXOgnTHqYbNax9m2saw%3D%3D">linkedIn</a></li>
+            </ul></div>
+            <div class="Sayantan"><ul><img src="sayantan.jpeg" alt="">
+            <li>Sayantan Maitra</li>
+            <li>4TH Year</li>
+            <li><a href="https://www.linkedin.com/in/sayantan-maitra-aa5168249?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bpj7gJ9XsSeuku4S9iqLBfg%3D%3D">linkedIn</a></li>
+            </ul></div>
+            <div class="Avaish"><ul><img src="avaish.jpeg" alt="">
+                <li>Avaish Siddiqui</li>
+                <li>4TH Year</li>
+                <li><a href="https://www.linkedin.com/in/md-avaish-siddiqui-5871562a4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNLL%2FfZ%2FXS86%2FS9yRI%2BzIBw%3D%3D">linkedIn</a></li>
+            </ul></div>
+            <div class="rahul"><ul><img src="rahul raj.jpeg" alt="">
+                <li>Rahul Raj</li>
+                <li>4TH Year</li>
+                <li><a href="https://www.linkedin.com/in/rahul-raj-a91b702a5/">linkedIn</a></li>
+            </ul></div>
+            <div class="alam"><ul><img src="alam.jpeg" alt="">
+                <li>Mohammad Alamgir</li>
+                <li>4TH Year</li>
+                <li><a href="https://www.linkedin.com/in/mohammad-alamgir-619331264?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2BRG%2Bc9u9S8q05NUN8BvHhQ%3D%3D">linkedIn</a></li>
+            </ul></div>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
